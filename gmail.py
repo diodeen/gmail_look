@@ -4,7 +4,6 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-import time
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
@@ -35,25 +34,15 @@ def main():
     service = build('gmail', 'v1', credentials=creds)
 
     # Call the Gmail API
-    #results = service.users().labels().list(userId='me').execute()
-    #labels = results.get('labels', [])
+    results = service.users().labels().list(userId='me').execute()
+    labels = results.get('labels', [])
 
-    #Get Messages
-    results = service.users().messages().list(userId='me', labelIds=['INBOX']).execute()
-    messages = results.get('messages', [])
-
-    #if not labels:
-    message_count = int(input("How many messages do you wanna see"))
-    if not messages:
-        print('No messages found.')
+    if not labels:
+        print('No labels found.')
     else:
-        print('Messages:')
-        #for label in labels:
-        for message in messages[:message_count]:
-            msg = service.users().messages().get(userId='me', id=message['id']).execute()
-            print(msg['snippet'])
-            print("\n")
-            time.sleep(2)
+        print('Labels:')
+        for label in labels:
+            print(label['name'])
 
 if __name__ == '__main__':
     main()
