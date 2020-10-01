@@ -1,0 +1,428 @@
+    1  clear
+    2  ps
+    3  ps -e
+    4  ps -ef
+    5  ps -el
+    6  clear
+    7  ps -u diomede
+    8  top
+    9  clear
+   10  fuser -v /
+   11  fuser -v -k -i /
+   12  ls
+   13  touch s.txt
+   14  ls
+   15  fuser -m -v s.txt /
+   16  clear
+   17  ls
+   18  nohup ping CODEOFFLNE &
+   19  logout
+   20  ls
+   21  cat nohup-out
+   22  clear
+   23  ls
+   24  cat nohup.out
+   25  clear
+   26  sudo useradd dio
+   27  sudo chage -l dio
+   28  su dio
+   29  sudo passwd dio
+   30  su dio
+   31  cd etc/
+   32  exit
+   33  clear
+   34  sudo mkhomedir_helper dio
+   35  cd/home
+   36  c d/home
+   37  cd /home
+   38  ls
+   39  cd dio
+   40  ls
+   41  ls -la
+   42  cd
+   43  sudo useradd -c "Dio Mio" dio1
+   44  chage -l dio1
+   45  sudo chage -l dio1
+   46  finger dio1
+   47  sudo apt install finger
+   48  clear
+   49  finger dio1
+   50  sudo useradd -e 12/2/2021 dio1
+   51  sudo useradd -e 12/2/2021 dio2
+   52  sudo chage -l dio2
+   53  id
+   54  id dio
+   55  id dio1
+   56  clear
+   57  sudo useradd -s /bin/sh dio2
+   58  sudo useradd -s /bin/sh dio3
+   59  passwd dio3
+   60  sudo passwd dio3
+   61  su dio3
+   62  exit
+   63  clear
+   64  sudo fdisk -l
+   65  sudo fdisk -l -more
+   66  sudo fdisk -l more
+   67  clear
+   68  sudo fdisk -l
+   69  sudo fdisk -/dev/sdb
+   70  sudo fdisk /dev/sdb
+   71  clear
+   72  dir
+   73  ls -l
+   74  clear
+   75  ifconfig
+   76  ifconfig -a
+   77  sudo ifconfig enp0s3 down
+   78  ifconfig
+   79  clear
+   80  ifconfig
+   81  sudo ifconfig enp0s3 up
+   82  ifconfig
+   83  sudo ifconfig enp0s3 10.0.2.22
+   84  ifconfig
+   85  sudo ifconfig enp0s3 netmask 255.255.255.0
+   86  ifconfig
+   87  sudo ifconfig enp0s3 broadcast 10.255.255.0
+   88  ifconfig
+   89  clear
+   90  sudo ifconfig enp0s3 prmisc
+   91  sudo ifconfig enp0s3 promisc
+   92  ifconfig
+   93  route
+   94  vi /etc/network/interfaces
+   95  sudo apt install ifupdown
+   96  vi /etc/network/interfaces
+   97  vi /etc/network/netplan
+   98  clear
+   99  cd  /etc/network/interfaces
+  100  cd /etc
+  101  ls
+  102  ls -l
+  103  dir
+  104  cd /interfaces
+  105  cd
+  106  cd  /etc/network/
+  107  dir
+  108  cd interfaces
+  109  cd /interfaces
+  110  dir
+  111  clear
+  112  dir
+  113  vi interfaces
+  114  clear
+  115  cd
+  116  cd /etc/netplan
+  117  dir
+  118  cd..
+  119  cd /etc
+  120  dir
+  121  cd /netplan
+  122  vi netplan
+  123  clear
+  124  cd /netplan
+  125  dir
+  126  cd netplan
+  127  dir
+  128  vi
+  129  clear
+  130  cd
+  131  cd /etc/network
+  132  vi
+  133  clear
+  134  cd
+  135  cd /etc
+  136  dir
+  137  cd
+  138  sudo apt remove ifupdown
+  139  vi /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+  140  ls
+  141  -ls
+  142  ls /
+  143  usb list
+  144  ipconfig
+  145  sudo iptables -L
+  146  sudo iptables --ctstate
+  147  iptables --ctstate
+  148  iptables -h
+  149  iptables -
+  150  iptables --ipv4
+  151  iptables -L
+  152  sudo iptables -p
+  153  sudo iptables -p -4
+  154  netstat
+  155  netstat -t
+  156  netstat -tu
+  157  netstat -tulnp
+  158  apt-get install openvpn
+  159  sudo
+  160  sudo -u
+  161  sudoapt-get install openvpn
+  162  sudo apt-get install openvpn
+  163  apt-get install openvpn
+  164  sudo su
+  165  ls
+  166  cd home
+  167  dir
+  168  cd etc
+  169  ifconfig
+  170  remote
+  171  dev
+  172  ifconfig macadress
+  173  ifconig -h
+  174  ifconfig -h
+  175  ifconfig loop
+  176  ifconfig  -netmask
+  177  ifconfig  --help
+  178  ifconfig  -a
+  179  ifconfig -l
+  180  ifconfig  --help
+  181  ifconfig  -v
+  182  ifconfig  -s
+  183  ping
+  184  ping -c
+  185  ping -inet -c
+  186  ping -inet -i
+  187  ping -enp0s3 -i
+  188  ping -enp0s3 -c
+  189  ping -enp0s3 -s
+  190  ifconfig  -s
+  191  ifconfig  -rx
+  192  ifconfig  --help
+  193  ifconfig  -netmask loclahost
+  194  ifconfig  -netmask localhost
+  195  ifconfig  --netmask localhost
+  196  ifconfig  --help
+  197  netmask
+  198  sudo apt install netmask
+  199  netmask
+  200  netmask --help
+  201  netmask -v
+  202  netmask -f
+  203  netmask -n
+  204  netmask --nodns
+  205  netmask -h
+  206  netmask -d
+  207  netmask --help
+  208  netmask localhost -f
+  209  netmask 127.0.0.1 -r
+  210  netmask 127.0.0.1 -b
+  211  netmask 127.0.0.1 -s
+  212  yaml
+  213  cd etc
+  214  ls
+  215  cd dio
+  216  ls
+  217  dir
+  218  cd
+  219  cd dio1
+  220  ls
+  221  nano example.txt
+  222  ifconfig
+  223  ifconfig -a
+  224  sudo ifconfig ep0s3 10.0.2.22
+  225  sudo ifconfig enp0s3 10.0.2.22
+  226  ifconfig -a
+  227  vim
+  228  vtop
+  229  top
+  230  vtop
+  231  sudo apt install util-server
+  232  vtop
+  233  sudo apt install util-vserver
+  234  vtop
+  235  sudo apt update
+  236  sudo apt upgrade
+  237  sudo apt install nodejs
+  238  sudo npm install -g vtop
+  239  sudo npm 
+  240  npm install -g vtop
+  241  sudo apt install npm
+  242  sudo npm install -g vtop
+  243  vtop
+  244  htop
+  245  vtop
+  246  sudo vtop
+  247  htop
+  248  fzf
+  249  ifconfig
+  250  sudo ifup enp0s3
+  251  ifconfig
+  252  sudo ifconfig enp0s3 10.0.2.22
+  253  ifconfig 
+  254  route
+  255  nano
+  256  route
+  257  vi /etc/network/interfaces
+  258  sudo vi /etc/network/interfaces
+  259  nslookup 127.0.0.1
+  260  sudo nslookup 127.0.0.1
+  261  sudo nslookup localhost
+  262  sudo vi /etc/network/interfaces
+  263  sudo nslookup localhost
+  264  nslookup 127.0.0.1
+  265  sudo vi /etc/network/interfaces
+  266  nslookup 127.0.0.1
+  267  sudo vi /etc/network/interfaces
+  268  vi /etc/network/interfaces
+  269  sudo vi /etc/network/interfaces
+  270  nslookup 127.0.0.1
+  271  sudo nslookup localhost
+  272  ls
+  273  cd
+  274  cd  /etc/network/interfaces
+  275  cd /etc
+  276  cd /network
+  277  cd network
+  278  cd intrfaces
+  279  cd interfaces
+  280  ls
+  281  cd interfaces
+  282  ls
+  283  sudo nslookup localhost
+  284  nslookup localhost
+  285  nslookup 127.0.0.1
+  286  nslookup
+  287  sudo vi /etc/network/interfaces
+  288  enp0s3 down
+  289  apt install idupdown
+  290  apt install ifupdown
+  291  sudo apt install ifupdown
+  292  apt install ifupdown
+  293  sudo vi /etc/network/interfaces
+  294  sudo apt install ifupdown
+  295  sudo apt-get install -y ifupdown
+  296  --fix-missing
+  297  sudo --fix-missing
+  298  sudo apt-get --fix-missing
+  299  sudo apt update
+  300  sudo apt-get --fix-missing
+  301  sudo apt-get install -y ifupdown
+  302  enp0s3 down
+  303  sudo enp0s3 up
+  304  ip a
+  305  ifup 127.0.0.1
+  306  ifup enp0s3
+  307  sudo ifup enp0s3
+  308  sudo vi /etc/network/interfaces
+  309  sudo ifup enp0s3
+  310  sudo ifdown enp0s3
+  311  sudo vi /etc/network/interfaces
+  312  sudo ifup enp0s3
+  313  sudo vi /etc/network/interfaces
+  314  sudo ifup enp0s3
+  315  sudo vi /etc/network/interfaces
+  316  sudo ifup enp0s3
+  317  sudo ifdown enp0s3
+  318  sudo vi /etc/network/interfaces
+  319  sudo ifdown enp0s3
+  320  sudo vi /etc/network/interfaces
+  321  sudo ifdown enp0s3
+  322  sudo ifup enp0s3
+  323  sudo vi /etc/network/interfaces
+  324  sudo ifup enp0s3
+  325  sudo su
+  326  ifconfig
+  327  ping www.google.com
+  328  sudo ifup enp0s3
+  329  sudo ifdown enp0s3
+  330  ifconfig
+  331  nslookup 127.0.0.1 
+  332  ping 10.0.2.15
+  333  netstat
+  334  netstat l more
+  335  netstat -a
+  336  netstat -a l more
+  337  netstat -a l --more
+  338  netstat -a l -more
+  339  netstat -a l more
+  340  netstat -at
+  341  netstat -au
+  342  netstat -atl
+  343  netstat -s
+  344  netstat -tp l
+  345  sudo su
+  346  ping 10.0.2.19
+  347  ping 10.0.2.15
+  348  ping 10.0.2.16
+  349  sudo reboot
+  350  ls
+  351  clear
+  352  ifconfig
+  353  ping 10.0.2.19
+  354  ping 10.0.2.16
+  355  arp -v
+  356* 
+  357  arp -v
+  358* 
+  359  history
+  360  history | less
+  361  ls
+  362  find / -name -d "git_env*"
+  363  find / -type d -name  "git_env*"
+  364  cd /git_environment
+  365  ls
+  366  cd /bin
+  367  cd +
+  368  ls -a
+  369  cd
+  370  ls -a
+  371  l
+  372  cd /var
+  373  cd
+  374  ls /
+  375  find / -type d -name  "git_env*"
+  376  cd /root
+  377  ls /
+  378  cd /git_environment
+  379  cd git_environment
+  380  ls
+  381  git clone https://github.com/diodeen/gmail_look.git
+  382  ls
+  383  python -m gmail  "/root/git_environment/venv/gmail"
+  384  python -m venv  "/root/git_environment/venv/gmail"
+  385  virtualenv -p /usr/bin/python3  /root/git_environment/venv/gmail
+  386  cd gmail_look/
+  387  cd-
+  388  cd -
+  389  ls
+  390  cd venv/
+  391  ls
+  392  cd gmail/
+  393  ls
+  394  cd bin/
+  395  source activate
+  396  cd -
+  397  cd +
+  398  cd /
+  399  cd root
+  400  cd git_environment/
+  401  cd gmail_look/
+  402  ls
+  403  gmail.py
+  404  python gmail.py
+  405  pip install ggole-api-python-client
+  406  pip install google-api-python-client
+  407  python gmail.py
+  408  pip install google-oauthlib
+  409  pip install google-auth-oauthlib
+  410  python gmail.py
+  411  pip freeze > requirements.txt
+  412  pip freeze > requirements.txt -H
+  413  sudo pip freeze > requirements.txt
+  414  sudo pip3 freeze > requirements.txt
+  415  ls
+  416  vi requirements.txt 
+  417  git add .
+  418  git git status
+  419  git status
+  420  git commit -m 'list of required modules requirements.txt'
+  421  git push -u origin master
+  422  git pull
+  423  pip install -r requirements.txt
+  424  python gmail.py
+  425  clear
+  426  history
+  427  history | less
+  428  history > used_commands_venv_git.txt
