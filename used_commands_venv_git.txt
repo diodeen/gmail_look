@@ -1,0 +1,49 @@
+  375  find / -type d -name  "git_env*"
+  376  cd /root
+  377  ls /
+  378  cd /git_environment
+  379  cd git_environment
+  380  ls
+  381  git clone https://github.com/diodeen/gmail_look.git
+  382  ls
+  383  python -m gmail  "/root/git_environment/venv/gmail"
+  384  python -m venv  "/root/git_environment/venv/gmail"
+  385  virtualenv -p /usr/bin/python3  /root/git_environment/venv/gmail
+  386  cd gmail_look/
+  387  cd-
+  388  cd -
+  389  ls
+  390  cd venv/
+  391  ls
+  392  cd gmail/
+  393  ls
+  394  cd bin/
+  395  source activate
+  399  cd root
+  400  cd git_environment/
+  401  cd gmail_look/
+  402  ls
+  404  python gmail.py
+  406  pip install google-api-python-client
+  407  python gmail.py
+  408  pip install google-oauthlib
+  409  pip install google-auth-oauthlib
+  410  python gmail.py
+  411  pip freeze > requirements.txt
+  412  pip freeze > requirements.txt -H
+  413  sudo pip freeze > requirements.txt
+  414  sudo pip3 freeze > requirements.txt
+  415  ls
+  416  vi requirements.txt 
+  417  git add .
+  418  git git status
+  419  git status
+  420  git commit -m 'list of required modules requirements.txt'
+  421  git push -u origin master
+  422  git pull
+  423  pip install -r requirements.txt
+  424  python gmail.py
+  425  clear
+  426  history
+  427  history | less
+  428  history > used_commands_venv_git.txt
