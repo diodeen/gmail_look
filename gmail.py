@@ -50,13 +50,27 @@ def main():
     else:
         print('###Messages:####')
         print("\n")
-        #for label in labels:
+        datetime =''
+        fromSender = ''
+
         for message in messages[:message_count]:
             msg = service.users().messages().get(userId='me', id=message['id']).execute()
+
+            payload = msg['payload']['headers']
+            #print(payload)
+            for p in payload:
+                pdate = p['name']
+                if p['name'] == 'Date':
+                    datetime = p['value']
+                    print(datetime)
+                if p['name'] == 'From':
+                    fromSender = p['value']
+                    print(fromSender)
+
             print("From:")
-            print(msg['payload']['headers'][15]['value'])
+            print(fromSender)
             print("Received datetime:")
-            print(msg['payload']['headers'][14]['value'])
+            print(datetime)
             print("<--MESSAGE-->:")
             print(msg['snippet'])
             time.sleep(2)
