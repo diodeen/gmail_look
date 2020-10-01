@@ -44,23 +44,17 @@ def main():
 
     #if not labels:
     message_count = int(input("How many messages do you wanna see"))
-    print("\n")
     if not messages:
         print('No messages found.')
     else:
-        print('###Messages:####')
-        print("\n")
+        print('Messages:')
         #for label in labels:
         for message in messages[:message_count]:
             msg = service.users().messages().get(userId='me', id=message['id']).execute()
-            print("From:")
-            print(msg['payload']['headers'][15]['value'])
-            print("Received datetime:")
-            print(msg['payload']['headers'][14]['value'])
-            print("<--MESSAGE-->:")
+
             print(msg['snippet'])
-            time.sleep(2)
-            print("----------------------#")
             print("\n")
+            time.sleep(2)
+
 if __name__ == '__main__':
     main()
