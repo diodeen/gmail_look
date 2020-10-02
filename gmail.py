@@ -1,10 +1,14 @@
 from __future__ import print_function
-import pickle
+
 import os.path
-from googleapiclient.discovery import build
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
+import pickle
 import time
+
+from colorama import init
+from colorama import Fore,Style,Back
+from google.auth.transport.requests import Request
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
@@ -13,6 +17,7 @@ def main():
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
     """
+    init()
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -48,7 +53,8 @@ def main():
     if not messages:
         print('No messages found.')
     else:
-        print('###Messages:####')
+        print(Fore.LIGHTRED_EX + '###Messages:####')
+        print(Style.RESET_ALL)
         print("\n")
         datetime =''
         fromSender = ''
@@ -62,15 +68,17 @@ def main():
                 pdate = p['name']
                 if p['name'] == 'Date':
                     datetime = p['value']
-                    print(datetime)
+                    #print(datetime)
                 if p['name'] == 'From':
                     fromSender = p['value']
-                    print(fromSender)
+                    #print(fromSender)
 
-            print("From:")
+            print(Fore.GREEN + "From:")
             print(fromSender)
-            print("Received datetime:")
+            print(Style.RESET_ALL)
+            print(Fore.LIGHTCYAN_EX + "Received datetime:")
             print(datetime)
+            print(Style.RESET_ALL)
             print("<--MESSAGE-->:")
             print(msg['snippet'])
             time.sleep(2)
