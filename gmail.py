@@ -3,12 +3,18 @@ from __future__ import print_function
 import os.path
 import pickle
 import time
+import base64
+
+from texttable import Texttable
 
 from colorama import init
 from colorama import Fore,Style,Back
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+
+
+
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
@@ -17,6 +23,8 @@ def main():
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
     """
+
+
     init()
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
@@ -48,7 +56,7 @@ def main():
     messages = results.get('messages', [])
 
     #if not labels:
-    message_count = int(input("How many messages do you wanna see"))
+    message_count = int(input("How many messages do you wanna see? No.: "))
     print("\n")
     if not messages:
         print('No messages found.')
@@ -58,10 +66,16 @@ def main():
         print("\n")
         datetime =''
         fromSender = ''
+        subject = ''
+        b = ''
 
-        for message in messages[:message_count]:
+        t = Texttable()
+
+
+    for message in messages[:message_count]:
             msg = service.users().messages().get(userId='me', id=message['id']).execute()
 
+            #print(msg)
             payload = msg['payload']['headers']
             #print(payload)
             for p in payload:
@@ -72,7 +86,17 @@ def main():
                 if p['name'] == 'From':
                     fromSender = p['value']
                     #print(fromSender)
+                if p['name'] == 'Subject':
+                    subject = p['value']
 
+
+            #body = msg['payload']['parts'][0]['body']['data']
+            #b = base64.urlsafe_b64decode(body.encode('ASCII').decode('utf-8'))
+            #print("body")
+            #print(b)
+
+            print("Subject:")
+            print(subject)
             print(Fore.GREEN + "From:")
             print(fromSender)
             print(Style.RESET_ALL)
@@ -84,5 +108,14 @@ def main():
             time.sleep(2)
             print("----------------------#")
             print("\n")
+
+            #t.add_rows([['Messages received:', ''],['From', fromSender], ['Received datetime', datetime], ['MESSAGE', msg['snippet']], [' ', ' ']])
+
+    #print(t.draw())
+
+
+
+
+
 if __name__ == '__main__':
     main()
